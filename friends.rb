@@ -11,7 +11,7 @@ end
 
 # 3.
 def check_favourite_food(person, food)
-  if person[:favourites][:snacks] = food
+  if person[:favourites][:snacks] == food
     return true
   else
     false
@@ -22,4 +22,17 @@ end
 def add_friend(name, friend)
   name[:friends] <<  friend
 end
-  
+
+# 5.
+def punt_friend(name, friend)
+  name[:friends].delete(friend)
+end
+
+# 6.
+def total_money()
+  total = 0
+  for people in @people
+    total += people[:monies]
+  end
+  return total
+end
