@@ -19,3 +19,7 @@ def check_favourite_food(person, food)
 end
 
 # 4.
+def add_friend(name, friend)
+  name[:friends] <<  friend
+end
+  

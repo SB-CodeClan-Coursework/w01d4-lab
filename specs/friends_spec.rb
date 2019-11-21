@@ -91,8 +91,9 @@ end
   # (e.g. the function add_friend(@person2, "Scrappy-Doo") should add Scrappy-Doo to the friends.)
   # (hint: This function should not return anything. After the function call, check for the length of the friends array to test it!)
 def test_add_friend
-  before = @person5[:friends].length
-   add_friend
+   add_friend(@person5, "Daphne")
+   assert_equal(1, @person5[:friends].length)
+end
 
   # 5. For a given person, remove a specific name from their list of friends
   # (hint: Same as above, testing for the length of the array should be sufficient)
